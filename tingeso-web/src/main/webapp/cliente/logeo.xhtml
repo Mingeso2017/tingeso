@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+
+    <ui:composition template="/template.xhtml">
+
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListClienteTitle}"></h:outputText>
+        </ui:define>
+
+        <ui:define name="body">
+        <!--    <form action="proyecto3" method="post"> -->
+        <h:form id="ClienteListForm">
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="#{bundle.ListClienteTitle_nombre_cliente}"/>
+                </f:facet>
+                    <h:outputText value="#{item.nombre_cliente}"/>
+             </p:column>
+            <!-- <input type="submit" name="entrar" id="entrar" value="Entrar" />-->
+        </h:form>
+        
+    
+        </ui:define>
+
+    </ui:composition>
+        
+</html>
